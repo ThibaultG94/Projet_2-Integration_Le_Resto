@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Allura_Regular";
+    src: url("../fonts/Allura_Regular/Allura-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins_Medium";
+    src: url("../fonts/Poppins_Medium/Poppins-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Roboto_Light";
+    src: url("../fonts/Roboto_Light/Roboto-Light.ttf");
+}
+
+$font1: "Roboto_Light", sans-serif;
+$font2: "Allura_Regular", sans-serif;
+$font3: "Poppins_Medium", sans-serif;
+$color1: #eeeeee;
+$color2: #21201e;
+$color3: #b6b6b6;
+$color4: #a67245;
