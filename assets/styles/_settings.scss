@@ -20,3 +20,23 @@ $color1: #eeeeee;
 $color2: #21201e;
 $color3: #b6b6b6;
 $color4: #a67245;
+
+* {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    text-align: center;
+}
+
+a {
+    color: $color1;
+}
+
+.four-cui {
+    width: 37px;
+}

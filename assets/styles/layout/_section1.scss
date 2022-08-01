@@ -1,0 +1,142 @@
+.section1 {
+    background: url("../img/bg-menu-01.jpg") no-repeat bottom;
+    background-color: $color2;
+
+    .menu {
+        max-width: 52.5%;
+        margin: 0 auto;
+        padding: 75px 0 150px;
+
+        .menu-header {
+
+            h4 {
+                font-family: $font2;
+                color: $color4;
+                font-size: 2.5rem;
+                font-weight: normal;
+                margin-bottom: 40px;
+            }
+
+            .nav-menu {
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    max-width: 96%;
+                    margin: 0 auto;
+
+                    li {
+                        margin: 35px 0 50px;
+                        transition: 0.4s ease;
+
+                        &:hover {
+                            transform: scale(1.2);
+                        }
+
+                        a {
+                            font-family: $font1;
+                            font-size: 1.3rem;
+                            border-bottom: 2px solid $color3;
+                            padding-bottom: 10px;
+                            transition: color 0.4s ease;
+
+                            &:hover {
+                                color: $color4;
+                                border-bottom: $color4;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu-container {
+            background: $color1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+                "dish1 dish5"
+                "dish2 dish6"
+                "dish3 dish7"
+                "dish4 dish8";
+            padding: 18px 0 19px;
+            border-top: 5px solid $color4;
+
+            .dish {
+                border-bottom: 1px dashed $color3;
+                display: grid;
+                grid-template-columns: 28.34% 60.73% 10.93%;
+                padding: 36px 0;
+                margin: 0 22px;
+                align-items: center;
+
+                .dish-img {
+
+                    img {
+                        width: 112px;
+                        border-radius: 60px;
+                    }
+                }
+
+                .dish-name {
+                    text-align: left;
+                    max-width: 90%;
+
+                    h3 {
+                        font-family: $font1;
+                        text-transform: uppercase;
+                        font-size: 1rem;
+                        margin-bottom: 5px;
+                    }
+
+                    p {
+                        font-family: $font1;
+                        font-size: 1.3rem;
+                    }
+                }
+
+                .dish-price {
+                    p {
+                        font-family: $font1;
+                        font-weight: bold;
+                        color: $color4;
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+
+            .one {
+                grid-area: dish1;
+            }
+
+            .two {
+                grid-area: dish2;
+            }
+
+            .three {
+                grid-area: dish3;
+            }
+
+            .four {
+                grid-area: dish4;
+            }
+
+            .five {
+                grid-area: dish5;
+            }
+
+            .six {
+                grid-area: dish6;
+            }
+
+            .seven {
+                grid-area: dish7;
+            }
+
+            .eight {
+                grid-area: dish8;
+            }
+        }
+    }
+}
