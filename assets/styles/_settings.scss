@@ -20,6 +20,7 @@ $color1: #eeeeee;
 $color2: #21201e;
 $color3: #b6b6b6;
 $color4: #a67245;
+$color5: #090909;
 
 * {
     margin: 0;
@@ -39,4 +40,26 @@ a {
 
 .four-cui {
     width: 37px;
+}
+
+section {
+    background-color: $color2;
+    position: relative;
+    padding-bottom: 287px;
+
+    .section-container {
+        max-width: 69%;
+        margin: 0 auto;
+        padding-top: 100px;
+    }
+
+    .gmap {
+        background: url("../img/gmap.jpg");
+        background-position: 0 -325px;
+        height: 439px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+
+    }
 }

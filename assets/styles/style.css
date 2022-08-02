@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Allura_Regular";
   src: url("../fonts/Allura_Regular/Allura-Regular.ttf");
@@ -30,6 +31,25 @@ a {
   width: 37px;
 }
 
+section {
+  background-color: #21201e;
+  position: relative;
+  padding-bottom: 287px;
+}
+section .section-container {
+  max-width: 69%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+section .gmap {
+  background: url("../img/gmap.jpg");
+  background-position: 0 -325px;
+  height: 439px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
 header {
   background: url("../img/bg-slider-06.jpg") no-repeat center/cover;
 }
@@ -50,15 +70,20 @@ header nav .nav-center ul {
   display: flex;
   justify-content: space-between;
 }
+header nav .nav-center ul li {
+  transition: 0.4s ease;
+}
+header nav .nav-center ul li:hover {
+  transform: scale(1.3);
+}
 header nav .nav-center ul li a {
   font-family: "Roboto_Light", sans-serif;
   text-transform: uppercase;
   font-size: 0.9rem;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 header nav .nav-center ul li a:hover {
-  border-bottom: 1px solid #eeeeee;
-  padding-bottom: 2px;
+  font-weight: bold;
 }
 header nav .nav-right {
   display: flex;
@@ -180,7 +205,7 @@ main .main-right {
 }
 .section1 .menu .menu-header .nav-menu ul li {
   margin: 35px 0 50px;
-  transition: 0.4s ease;
+  transition: 0.5s ease;
 }
 .section1 .menu .menu-header .nav-menu ul li:hover {
   transform: scale(1.2);
@@ -190,11 +215,10 @@ main .main-right {
   font-size: 1.3rem;
   border-bottom: 2px solid #b6b6b6;
   padding-bottom: 10px;
-  transition: color 0.4s ease;
+  transition: 0.6s ease;
 }
 .section1 .menu .menu-header .nav-menu ul li a:hover {
-  color: #a67245;
-  border-bottom: #a67245;
+  border-bottom: none;
 }
 .section1 .menu .menu-container {
   background: #eeeeee;
@@ -260,4 +284,297 @@ main .main-right {
 }
 .section1 .menu .menu-container .eight {
   grid-area: dish8;
+}
+
+.reservation {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+.reservation .open {
+  background: #090909;
+  padding: 30px;
+}
+.reservation .open .open-container {
+  border: 1px dashed #b6b6b6;
+  padding-bottom: 43px;
+}
+.reservation .open .open-container h3 {
+  margin-top: 45px;
+  font-family: "Allura_Regular", sans-serif;
+  color: #a67245;
+  font-size: 3.1rem;
+  font-weight: normal;
+  line-height: 22px;
+}
+.reservation .open .open-container h2 {
+  color: #eeeeee;
+  text-transform: uppercase;
+  font-family: "Poppins_Medium", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 3px;
+  margin-bottom: 33px;
+}
+.reservation .open .open-container img {
+  margin-bottom: 50px;
+}
+.reservation .open .open-container h4 {
+  font-family: "Poppins_Medium", sans-serif;
+  color: #a67245;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+.reservation .open .open-container p {
+  font-family: "Roboto_Light", sans-serif;
+  color: #eeeeee;
+  margin: 16px 0 45px;
+  font-size: 1rem;
+}
+.reservation .reservation-container {
+  background: #eeeeee;
+  padding: 116px 0 0;
+}
+.reservation .reservation-container h2 {
+  font-family: "Allura_Regular", sans-serif;
+  color: #a67245;
+  font-weight: normal;
+  font-size: 3.2rem;
+  line-height: 18px;
+}
+.reservation .reservation-container h3 {
+  font-family: "Poppins_Medium", sans-serif;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  margin-bottom: 31px;
+}
+.reservation .reservation-container img {
+  width: 32px;
+  margin-bottom: 60px;
+}
+.reservation .reservation-container form .reserv-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  max-width: 72%;
+  margin: 0 auto 35px;
+  gap: 25px;
+}
+.reservation .reservation-container form .reserv-form input,
+.reservation .reservation-container form .reserv-form select {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #b6b6b6;
+  font-size: 1rem;
+  padding-bottom: 13px;
+  margin-bottom: 15px;
+}
+.reservation .reservation-container form #submit {
+  background: #090909;
+  color: #eeeeee;
+  padding: 15px 35px;
+  font-family: "Poppins_Medium", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 5px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.reservation .reservation-container form #submit:hover {
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+.event {
+  margin: 161px 0 200px;
+}
+.event .our-event h3 {
+  font-family: "Allura_Regular", sans-serif;
+  color: #a67245;
+  font-weight: normal;
+  font-size: 3rem;
+  line-height: 30px;
+}
+.event .our-event h2 {
+  font-family: "Poppins_Medium", sans-serif;
+  text-transform: uppercase;
+  color: #eeeeee;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 37px;
+}
+.event .our-event img {
+  margin-bottom: 30px;
+}
+.event .event-container {
+  max-width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 10px;
+}
+.event .event-container .event-container-left {
+  display: grid;
+  grid-template-areas: 50% 50%;
+  gap: 25px;
+}
+.event .event-container .event-container-left .event-left {
+  display: grid;
+  grid-template-columns: 37.3% 62.7%;
+}
+.event .event-container .event-container-left .event-left .first {
+  background: url("../img/event-01.jpg") no-repeat center/cover;
+}
+.event .event-container .event-container-left .event-left .second {
+  background: url("../img/event-02.jpg") no-repeat center/cover;
+}
+.event .event-container .event-container-left .event-left .event-left-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.event .event-container .event-container-left .event-left .event-left-img .left-july {
+  background: #21201e;
+  color: #eeeeee;
+  padding: 26px 35px;
+}
+.event .event-container .event-container-left .event-left .event-left-img .left-july p {
+  font-family: "Roboto_Light", sans-serif;
+  font-size: 2.1rem;
+  font-weight: bold;
+  line-height: 35px;
+}
+.event .event-container .event-container-left .event-left .event-left-img .left-july h5 {
+  font-family: "Roboto_Light", sans-serif;
+  font-weight: lighter;
+  font-size: 1.2rem;
+}
+.event .event-container .event-container-left .event-left .event-left-tickets {
+  background: #eeeeee;
+  text-align: left;
+  padding-left: 35px;
+  margin-right: 16px;
+}
+.event .event-container .event-container-left .event-left .event-left-tickets h4 {
+  font-family: "Roboto_Light", sans-serif;
+  font-weight: normal;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  margin: 39px 0 26px;
+}
+.event .event-container .event-container-left .event-left .event-left-tickets p {
+  font-family: "Roboto_Light", sans-serif;
+  color: #b6b6b6;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+.event .event-container .event-container-left .event-left .event-left-tickets p i {
+  font-size: 0.9rem;
+  vertical-align: 15%;
+}
+.event .event-container .event-container-left .event-left .event-left-tickets h5 {
+  font-family: "Roboto_Light", sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  margin: 33px 0 67px;
+  cursor: pointer;
+}
+.event .event-container .event-container-right {
+  background: url("../img/event-03.jpg") no-repeat center/cover;
+  padding: 32px 0;
+}
+.event .event-container .event-container-right .event-right {
+  background: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 88%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.event .event-container .event-container-right .event-right .right-july {
+  background: #21201e;
+  color: #eeeeee;
+  padding: 26px 35px;
+  margin-bottom: 50px;
+}
+.event .event-container .event-container-right .event-right .right-july p {
+  font-family: "Roboto_Light", sans-serif;
+  font-size: 2.1rem;
+  font-weight: bold;
+  line-height: 35px;
+  color: #eeeeee;
+}
+.event .event-container .event-container-right .event-right .right-july h5 {
+  font-family: "Roboto_Light", sans-serif;
+  font-weight: lighter;
+  font-size: 1.2rem;
+}
+.event .event-container .event-container-right .event-right h4 {
+  font-family: "Roboto_Light", sans-serif;
+  font-weight: normal;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  margin-bottom: 26px;
+}
+.event .event-container .event-container-right .event-right p {
+  font-family: "Roboto_Light", sans-serif;
+  color: #b6b6b6;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+.event .event-container .event-container-right .event-right p i {
+  font-size: 0.9rem;
+  vertical-align: 15%;
+}
+.event .event-container .event-container-right .event-right h6 {
+  font-family: "Roboto_Light", sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  margin: 90px 0 57px;
+  cursor: pointer;
+}
+
+.comment {
+  position: relative;
+  background: #eeeeee;
+  z-index: 1;
+  padding: 82px 0;
+}
+.comment img {
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  border-radius: 100px;
+  width: 75px;
+}
+.comment p {
+  font-family: "Roboto_Light", sans-serif;
+  font-size: 1.3rem;
+  max-width: 77%;
+  margin: 0 auto 45px;
+  line-height: 38px;
+}
+.comment p:before {
+  content: "❝";
+  font-size: 1.8rem;
+}
+.comment p:after {
+  content: "❞";
+  font-size: 1.8rem;
+}
+.comment h4 {
+  font-family: "Roboto_Light", sans-serif;
+  font-size: 1.9rem;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.comment h5 {
+  font-family: "Roboto_Light", sans-serif;
+  color: #a67245;
+  font-weight: normal;
+  font-size: 1.3rem;
 }/*# sourceMappingURL=style.css.map */

@@ -23,16 +23,20 @@ header {
                 justify-content: space-between;
 
                 li {
+                    transition: 0.4s ease;
+
+                    &:hover {
+                        transform: scale(1.3);
+                    }
 
                     a {
                         font-family: $font1;
                         text-transform: uppercase;
                         font-size: 0.9rem;
-                        transition: 0.3s ease;
+                        transition: 0.3s;
 
                         &:hover {
-                            border-bottom: 1px solid $color1;
-                            padding-bottom: 2px;
+                            font-weight: bold;
                         }
                     }
                 }
