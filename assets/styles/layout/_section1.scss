@@ -4,8 +4,23 @@
 
     .menu {
         max-width: 52.5%;
+        min-width: 980px;
         margin: 0 auto;
         padding: 75px 0 150px;
+
+        @media screen and (max-width: 1020px) {
+            min-width: 490px;
+        }
+
+        @media screen and (max-width: 512px) {
+            min-width: 150px;
+            max-width: 90%;
+        }
+
+        @media screen and (max-width: 178px) {
+            min-width: 100px;
+            max-width: 99%;
+        }
 
         .menu-header {
 
@@ -15,6 +30,10 @@
                 font-size: 2.5rem;
                 font-weight: normal;
                 margin-bottom: 40px;
+
+                @media screen and (max-width: 178px) {
+                    font-size: 2rem;
+                }
             }
 
             .nav-menu {
@@ -25,9 +44,13 @@
                     max-width: 96%;
                     margin: 0 auto;
 
+                    @media screen and (max-width: 218px) {
+                        display: none;
+                    }
+
                     li {
                         margin: 35px 0 50px;
-                        transition: 0.5s ease;
+                        transition: 0.6s ease;
 
                         &:hover {
                             transform: scale(1.2);
@@ -36,12 +59,54 @@
                         a {
                             font-family: $font1;
                             font-size: 1.3rem;
-                            border-bottom: 2px solid $color3;
-                            padding-bottom: 10px;
-                            transition: 0.6s ease;
+                            position: relative;
 
-                            &:hover {
-                                border-bottom: none;
+                            &:after {
+                                content: "";
+                                width: 100%;
+                                height: 1px;
+                                position: absolute;
+                                background: $color3;
+                                left: 50%;
+                                transform: translate(-50%, 35px);
+                                transition: 0.4s ease;
+                                transform-origin: center;
+
+                                @media screen and (max-width: 1200px) {
+                                    transform: translate(-50%, 30px);
+                                }
+
+                                @media screen and (max-width: 1020px) {
+                                    transform: translate(-50%, 28px);
+                                }
+
+                                @media screen and (max-width: 512px) {
+                                    transform: translate(-50%, 24px);
+                                }
+                            }
+
+                            &:hover:after {
+                                width: 0%;
+                            }
+
+                            @media screen and (max-width: 1200px) {
+                                font-size: 1.1rem;
+                            }
+
+                            @media screen and (max-width: 1020px) {
+                                font-size: 1rem;
+                            }
+
+                            @media screen and (max-width: 512px) {
+                                font-size: 0.9rem;
+                            }
+
+                            @media screen and (max-width: 375px) {
+                                font-size: 0.8rem;
+                            }
+
+                            @media screen and (max-width: 270px) {
+                                font-size: 0.7rem;
                             }
                         }
                     }
@@ -62,6 +127,10 @@
             padding: 18px 0 19px;
             border-top: 5px solid $color4;
 
+            @media screen and (max-width: 1020px) {
+                display: block;
+            }
+
             .dish {
                 border-bottom: 1px dashed $color3;
                 display: grid;
@@ -70,11 +139,40 @@
                 margin: 0 22px;
                 align-items: center;
 
+                @media screen and (max-width: 440px) {
+                    margin: 0 11px;
+                }
+
+                @media screen and (max-width: 355px) {
+                    grid-template-columns: 26.34% 55.73% 17.93%;
+                }
+
+                @media screen and (max-width: 176px) {
+                    margin: 0;
+                }
+
                 .dish-img {
 
                     img {
                         width: 112px;
                         border-radius: 60px;
+
+                        @media screen and (max-width: 512px) {
+                            width: 90px;
+                        }
+
+
+                        @media screen and (max-width: 440px) {
+                            width: 80px;
+                        }
+
+                        @media screen and (max-width: 355px) {
+                            width: 60px;
+                        }
+
+                        @media screen and (max-width: 309px) {
+                            width: 99%;
+                        }
                     }
                 }
 
@@ -87,11 +185,35 @@
                         text-transform: uppercase;
                         font-size: 1rem;
                         margin-bottom: 5px;
+
+                        @media screen and (max-width: 355px) {
+                            font-size: 0.9rem;
+                        }
+
+                        @media screen and (max-width: 309px) {
+                            font-size: 0.8rem;
+                        }
+
+                        @media screen and (max-width: 205px) {
+                            font-size: 0.6rem;
+                        }
                     }
 
                     p {
                         font-family: $font1;
                         font-size: 1.3rem;
+
+                        @media screen and (max-width: 355px) {
+                            font-size: 1.1rem;
+                        }
+
+                        @media screen and (max-width: 309px) {
+                            font-size: 1rem;
+                        }
+
+                        @media screen and (max-width: 205px) {
+                            font-size: 0.8rem;
+                        }
                     }
                 }
 
@@ -101,6 +223,16 @@
                         font-weight: bold;
                         color: $color4;
                         font-size: 1.4rem;
+
+                        @media screen and (max-width: 355px) {
+                            font-size: 1.2rem;
+                        }
+
+                        @media screen and (max-width: 225px) {
+                            font-size: 0.9rem;
+                        }
+
+
                     }
                 }
             }

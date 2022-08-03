@@ -1,10 +1,25 @@
 .reservation {
     display: grid;
     grid-template-columns: 30% 70%;
+    min-width: 1000px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1020px) {
+        display: block;
+        min-width: 700px;
+    }
+
+    @media screen and (max-width: 754px) {
+        min-width: 100px;
+    }
 
     .open {
         background: $color5;
         padding: 30px;
+
+        @media screen and (max-width: 305px) {
+            padding: 0px;
+        }
 
         .open-container {
             border: 1px dashed $color3;
@@ -53,12 +68,24 @@
         background: $color1;
         padding: 116px 0 0;
 
+        @media screen and (max-width: 1020px) {
+            padding: 76px 0 40px;
+        }
+
         h2 {
             font-family: $font2;
             color: $color4;
             font-weight: normal;
             font-size: 3.2rem;
             line-height: 18px;
+
+            @media screen and (max-width: 246px) {
+                font-size: 2.3rem;
+            }
+
+            @media screen and (max-width: 179px) {
+                font-size: 1.7rem;
+            }
         }
 
         h3 {
@@ -66,6 +93,15 @@
             text-transform: uppercase;
             font-size: 2.2rem;
             margin-bottom: 31px;
+
+            @media screen and (max-width: 246px) {
+                font-size: 1.6rem;
+            }
+
+
+            @media screen and (max-width: 179px) {
+                font-size: 1.3rem;
+            }
         }
 
         img {
@@ -82,6 +118,12 @@
                 max-width: 72%;
                 margin: 0 auto 35px;
                 gap: 25px;
+                justify-content: center;
+
+                @media screen and (max-width: 754px) {
+                    display: flex;
+                    flex-direction: column;
+                }
 
                 input,
                 select {
@@ -92,6 +134,12 @@
                     padding-bottom: 13px;
                     margin-bottom: 15px;
                 }
+
+                input:focus {
+                    outline: none;
+                    border-bottom: 1px solid $color2;
+                }
+
             }
 
             #submit {
@@ -109,6 +157,17 @@
                 &:hover {
                     font-weight: bold;
                     transform: scale(1.1);
+                }
+
+                @media screen and (max-width: 264px) {
+                    padding: 3px 7px;
+                    font-size: 0.8rem;
+                    border-radius: 150px;
+                }
+
+                @media screen and (max-width: 172px) {
+                    padding: 0px;
+                    font-size: 0.8rem;
                 }
             }
         }

@@ -1,6 +1,10 @@
 .event {
     margin: 161px 0 200px;
 
+    @media screen and (max-width: 754px) {
+        display: none;
+    }
+
     .our-event {
         h3 {
             font-family: $font2;
@@ -31,10 +35,18 @@
         grid-template-columns: 60% 40%;
         gap: 10px;
 
+        @media screen and (max-width: 1020px) {
+            display: block;
+        }
+
         .event-container-left {
             display: grid;
             grid-template-areas: 50% 50%;
             gap: 25px;
+
+            @media screen and (max-width: 1020px) {
+                display: none;
+            }
 
             .event-left {
                 display: grid;
